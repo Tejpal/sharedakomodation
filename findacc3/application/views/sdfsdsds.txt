@@ -1,0 +1,321 @@
+<?php
+$baseurl = $this->config->item('base_url');
+$staticurl = $this->config->item('static_url');
+?>
+
+
+<div id="contentContainer">
+	<div id="contentHolder">
+		<div id="contentLeft">
+			<div id="createAdPage">
+				<h2>CREATE AD - SHARING PROVIDER</h2>
+                <form action="" name="create_ad" id="create_ad" method="post">
+				<?php						
+				if(!empty($ad_error_message)){
+					echo "<label class='error_message validation'>$ad_error_message</label>";
+					//echo "<br/><br/>";
+				}
+				?>				
+				<div id="adInfo">
+					<h3>Ad Information</h3>
+					<div id="leftDiv" >
+						<label for="ad_title">Title of the Ad</label><br />
+						<input type="text" name="ad_title" id="ad_title" class="if358 inputField defaultText" title="Enter impressive heading (max 100 chars)" /><br/><br/>
+						<label for="uploadImages" >Upload Images</label>
+						<div id="uploadImages">
+							<img src="<?=$staticurl?>images/accomodationPic.jpg" width="270" height="187" />
+							<div id="thumbImages" >
+								<img src="<?=$staticurl?>images/accThumb.jpg" width="67" height="45" />
+								<img src="<?=$staticurl?>images/accThumb.jpg" width="67" height="45" />
+								<img src="<?=$staticurl?>images/accThumb.jpg" width="67" height="45" />
+								<img src="<?=$staticurl?>images/accThumb.jpg" width="67" height="45" />
+							</div>
+							<label for="browse_image" id="browseImgLbl">Browse Images</label><br/>
+							<input type="file" id="browse_image" name="browse_image" />
+						</div>
+					</div>
+					<div id="rightDiv" >
+						<label for="prop_feature1" >Two best features of the property</label>
+						<input type="text" id="prop_feature1" name="prop_feature1" class="if358 inputField defaultText" title="Example - about location of property" />
+						<input type="text" id="prop_feature2" name="prop_feature2" class="if358 inputField defaultText" title="Example- spacious, rennovated etc. " /><br/><br/>
+						<label for="ad_description">Ad Description</label>
+						<textarea name="ad_description" id="ad_description" class="tf358 textField defaultText" title="Write anything here...
+						About your property
+						About yourself
+						About your preferences etc"></textarea><br/><br/>
+						<label for="pref_community">Preferred Community?</label>
+						<input type="text" name="pref_community" id="pref_community" class="if358 inputField" />
+						<p>Mentioning your preferred community can rank your Ad higher in search results for 
+						those Sharing Finders who are looking to Share Accommodation in a particular community.
+						</p>		
+					</div>
+				</div>
+							
+				<div id="contactDetails">
+					<h3>Contact Details</h3>
+					<div id="contactDetailsForm">
+						<label for="first_name" id="firstNameLbl">Firstname</label>
+						<label for="last_name" id="lastNameLbl" class="floatRight">Lastname / Surname</label>
+						<input type="text" name="first_name" id="first_name" class="if136 inputField" />
+						<input type="text" name="last_name" id="last_name" class="floatRight if136 inputField" /><br/><br/>
+						<label for="phone_no">Phone Number</label>
+						<input type="text" name="phone_no" id="phone_no" class="if304 inputField" />
+						<input type="checkbox" name="phone_visible" id="phone_visible" class="checkboxMargin" />
+						<label for="phone_visible" class="labmartop font12">Make my Phone Number public and visible to everyone</label><br/><br/>
+						<label for="email_id">Email ID</label>
+						<input type="text" name="email_id" id="email_id" class="if304 inputField" />
+						<input type="checkbox" name="email_visible" id="email_visible" class="checkboxMargin"/>
+						<label for="email_visible" class="labmartop font12">Make my Email ID public and visible to everyone</label>
+					</div>
+				</div>
+				
+				<div id="addressDetails">
+					<h3>Address</h3>
+					<div id="addressDetailsForm">
+						<label for="street_address" >Street Address</label>
+						<input type="text" name="street_address" id="street_address" class="if304 inputField" /><br/><br/>
+						<label for="post_code" id="postCodeLbl">PostCode</label>
+						<label for="suburb" id="suburbLbl" class="floatRight">Suburb</label><br/>
+						<input type="text" name="post_code" id="post_code" class="if136 inputField" />
+						<input type="text" name="suburb" id="suburb" class="floatRight if136 inputField" /><br/><br/>
+						<label for="state">State</label>
+							<select class="dd314 msDropDown" name="state" id="state" >
+                            <option name="one" value="">Any</option>
+                            <option  name="two" value="New South Wales">New South Wales</option>
+                            <option  name="two" value="Victoria">Victoria</option>
+                            <option  name="two" value="Queensland">Queensland</option>
+                            <option  name="two" value="Western Australia">Western Australia</option>
+                            <option  name="two" value="Northern Territory">Northern Territory</option>
+                            <option  name="two" value="Tasmania">Tasmania</option>
+                            <option  name="two" value="South Australia">South Australia</option>
+                           </select><p class="clearer"></p><br/>
+						<label for="country">Country</label>
+						<select class="dd314 msDropDown" name="country" id="country"  >
+                            <option name="one" value="">Select Category</option>
+                            <option  name="two" value="Australia">Australia</option>
+                            <option  name="two" value="India">India</option>
+                            <option  name="two" value="UK">UK</option>
+                           </select><p class="clearer"></p>
+						<input type="checkbox" name="address_visible" class="checkboxMargin" />
+						<label for="address_visible" class="font12">Make my Address public and visible to everyone</label>
+                        <p class="clearer"></p>
+					</div>
+				</div>
+				
+				<div id="propertyDetails">
+					<h3>Property / Room Details</h3>
+					<div id="propertyDetailsForm">
+						<label for="rent" id="rentLbl">Rent</label>
+						<label for="rent_duration" id="rentDurationLbl" class="floatRight">Rent Duration</label><br/>
+						<input type="text" id="rent" name="rent" class="floatLeft if136 inputField"/>
+						<div class="floatRight">
+									<select class="dd146 msDropDown" name="rent_duration" id="rent_duration" > 
+                                        <option name="one" value="1">Weekly</option>
+                                        <option  name="two" value="2">Fortnightly</option>
+                                        <option  name="two" value="3">Monthly</option>
+                                        <option  name="two" value="4">Quarterly</option>
+                                        <option  name="two" value="4">Yearly</option>
+                                       </select></div><p class="clearer"></p><br/>
+						
+						<label for="bondSecurity" >Bond / Security</label>
+						<label for="availability" id="availabilityLbl" class="floatRight">Availability</label><br/>
+						<input type="text" id="bond_security" name="bondSecurity" class="if136 inputField" />
+						<input type="text" id="availability" name="availability" class="floatRight if136 inputField" /><br/><br/>	
+						
+						<label for="minStay" >Min Stay</label>
+						<label for="maxStay" id="maxStayLbl" class="floatRight">Max Stay</label><br/>
+                        <select class="dd146 msDropDown"> 
+                            <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">1 month</option>
+                            <option  name="two" value="2">2 month</option>
+                            <option  name="two" value="2">3 month</option>
+                            <option  name="two" value="2">6 month</option>
+                            <option  name="two" value="2">1 year</option>
+                            <option  name="two" value="2">1 year 3 months</option>
+                            <option  name="two" value="2">1 year 6 months</option>
+                            <option  name="two" value="2">2 years</option>
+                           </select>
+						<div class="floatRight"><select class="dd146 msDropDown"> 
+                                        <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">1 month</option>
+                            <option  name="two" value="2">2 month</option>
+                            <option  name="two" value="2">3 month</option>
+                            <option  name="two" value="2">6 month</option>
+                            <option  name="two" value="2">1 year</option>
+                            <option  name="two" value="2">1 year 3 months</option>
+                            <option  name="two" value="2">1 year 6 months</option>
+                            <option  name="two" value="2">2 years</option>
+                                       </select></div><p class="clearer"></p><br/>
+						
+					  <label for="propertyType" >Property Type</label>
+						<select class="dd314 msDropDown">
+                            <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">Unit/Apartment</option>
+                            <option  name="two" value="3">House</option>
+                            <option  name="two" value="4">Townhouse</option>
+                            <option  name="two" value="4">Building</option>
+                            <option  name="two" value="4">Granny Flat</option>
+                      </select><p class="clearer"></p><br/>	
+						
+						<label for="bedrooms">No. of Bedrooms</label>
+						<label for="bathrooms" id="bathroomsLbl" class="floatRight">No. of Bathrooms</label><br/>
+						<select class="dd146 msDropDown"> 
+                            <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">1</option>
+                            <option  name="two" value="3">2</option>
+                            <option  name="two" value="4">3</option>
+                            <option  name="two" value="4">4</option>
+                            <option  name="two" value="4">5</option>
+                           </select>
+						<div class="floatRight"><select class="dd146 msDropDown"> 
+                                        <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">1</option>
+                            <option  name="two" value="3">2</option>
+                            <option  name="two" value="4">3</option>
+                                       </select></div><p class="clearer"></p><br/>
+						
+						<label for="yesNo1" >Utility Bills included in rent?</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="utilBills" id="utilBills1" value="yes" />&nbsp;Yes&nbsp;&nbsp;
+            			<input type="radio" name="utilBills" id="utilBills2" value="no" checked="checked" />&nbsp;No
+            			<div class="radioDropD" id="utilBillContent">
+                        <strong>Choose which utilities are included:</strong><br /><br />
+                            <ul>
+                            	<li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Phone</label>
+                                </li>
+                                <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Internet</label>
+                              </li> 
+                              <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Electricity</label>
+                              </li>
+                            </ul>
+                            <ul>
+                            	<li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Cable TV</label>
+                                </li>
+                                <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Water</label>
+                              </li> 
+                              <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Gas</label>
+                              </li>
+                            </ul>
+                        <p class="clearer"></p>
+                        </div><br /><br />
+            		<label for="yesNo1" >Room / Property furnished?</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="furnish" id="furnish1" value="yes" />&nbsp;Yes&nbsp;&nbsp;
+            			<input type="radio" name="furnish" id="furnish2" value="no" checked="checked" />&nbsp;No	
+                        <div class="radioDropD" id="furnishContent">
+                        <strong>Choose which things are included:</strong><br /><br />
+                            <ul>
+                            	<li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Phone</label>
+                                </li>
+                                <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">TV</label>
+                              </li> 
+                              <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Air conditioning</label>
+                              </li>
+                                <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Internet</label>
+                              </li>
+                            </ul>
+                            <ul>
+                            	<li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Microwave</label>
+                                </li>
+                                <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Couch/Sofa</label>
+                              </li> 
+                              <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Refrigerator</label>
+                              </li>
+                                <li>
+                                <input type="checkbox" name="phone"/>
+                                <label for="phone">Music System</label>
+                              </li>
+                            </ul>
+                        <p class="clearer"></p>
+                        </div>
+					</div>
+				</div>
+				
+				<div id="yourPreferences">
+					<h3>Your Preferences</h3>
+					<div id="yourPreferencesForm">
+					
+						<label for="gender" >Gender</label>
+						<select class="dd314 msDropDown" id="gender">
+                            <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">Male</option>
+                            <option  name="two" value="3">Female</option>
+                            <option  name="two" value="4">Couple</option>
+                      </select><p class="clearer"></p><br/>	
+						
+						<label for="smoker">Smoker</label>
+						<label for="age" id="ageLbl" class="floatRight">Age Group</label><br/>
+                        <select class="dd146 msDropDown" id="smoker" name="smoker"> 
+                            <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">Smoker</option>
+                            <option  name="two" value="3">Non Smoker</option>
+                            <option  name="two" value="4">Smoke Outside Only</option>
+                           </select>
+                           <div class="floatRight"><select class="dd146 msDropDown" id="age" name="age"> 
+                                        <option name="one" value="1">Any</option>
+                                        <option  name="two" value="2">18-25 yrs</option>
+                                        <option  name="two" value="3">26-35 yrs</option>
+                                        <option  name="two" value="4">36-45</option>
+                                        <option  name="two" value="4">46-55</option>
+                                        <option  name="two" value="4">55+</option>
+                                       </select></div><p class="clearer"></p><br/>
+						
+						<label for="orientation">Orientation</label>
+						<label for="diet" id="dietLbl" class="floatRight">Diet</label><br/>
+						<select class="dd146 msDropDown" id="orientation" name="orientation"> 
+                            <option name="one" value="1">Any</option>
+                            <option  name="two" value="2">Straight</option>
+                            <option  name="two" value="3">Gay/Lesbian</option>
+                            <option  name="two" value="3">Bisexual</option>
+                           </select>
+						<div class="floatRight"><select class="dd146 msDropDown" id="diet" name="diet"> 
+                                        <option name="one" value="1">Any</option>
+                                        <option  name="two" value="2">Vegetarian</option>
+                                        <option  name="two" value="3">Non Vegetarian</option>
+                                        <option  name="two" value="3">Non Veg(Halal)</option>
+                                       </select></div><p class="clearer"></p><br/>
+						
+					</div>
+				</div>
+				
+				<div id="prevPostBtnDiv" align="center">
+                	<input type="button" class="previewAdSubmit pageSubmitBtn" value="" onclick="window.location='#'" />
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" value="" class="postAdSubmit pageSubmitBtn" />
+				</div>
+				</form>
+			</div>
+		</div>
+		<div id="ads" align="right">
+			<img src="<?=$staticurl?>images/ads.jpg" width="160" height="502"/>
+		</div>
+    	<br class="clearer">
+	</div>
+    <br class="clearer">
+</div>

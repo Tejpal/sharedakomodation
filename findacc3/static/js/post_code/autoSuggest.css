@@ -1,0 +1,121 @@
+ /*
+ * Facebook Style Add Friends Script
+ * http://www.scriptandcodes.wordpress.com/
+ *
+ * @version
+ * 1.0 (May 20 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2010-2011 
+ *
+ * @Auther
+ * Amit Patil (amitpatil321@gmail.com)
+ * Maharashtra (India) 
+ *
+ * @license
+ * This file is part of Facebook Style Add Friends.
+ * 
+ * Facebook Style Add Friends Script is freeware script. you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Facebook Style Add Friends Script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this script.  If not, see <http://www.gnu.org/copyleft/lesser.html>.
+ */
+.main{
+	margin : 20px;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.list{
+	margin:0px;
+	padding:0px;
+	width : 300px;
+	list-style-type: none; 
+	padding: 0;
+	background : #f1f0f0;
+	height:180px;
+	min-height:180px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	
+}
+.list li{
+	list-style : none;
+	width : 100%;
+	text-align:left;
+	font-size:12px;
+	background-color:#f8f8f8;
+	margin-bottom:2px;
+	height:24px;
+}
+.list a{
+	display : block;
+	text-decoration : none;
+	padding :0 8px;
+	cursor : default;
+	color:#3a3a3a;
+	text-transform:capitalize;
+	line-height:24px;
+}
+.list li.selected{
+	background-color : #e9e9e9;
+}
+.selected a{
+}
+.selected span{
+}
+#loading{
+	visibility:hidden;
+	padding-left:5px;
+}
+.matched{
+	font-weight:bold;
+	color: #000000;
+	background : #D8D8D8;
+}
+.ajax_response{
+	border:none;
+	display:none;
+	/*padding:2px 2px;*/
+	position : absolute;
+	/* [disabled]padding:7px; */
+	margin-left:139px;
+	margin-top:-32px;
+	overflow: hidden;
+	z-index:9999;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	
+	background-color:#555;
+	padding:7px;
+}
+.suggestHol{
+	width:300px;
+	float:left;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	
+	border:#000 solid 0px;
+	overflow: hidden;
+}
+.suggestHead{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#eb8823;
+	padding:7px;
+	background-color:#f1f0f0;
+	font-weight:bold;
+	cursor:default;
+}
+/*.highlighted{
+    background : #CCCCCC;
+	font-weight : bold;
+}*/

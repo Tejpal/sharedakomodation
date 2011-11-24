@@ -1,0 +1,89 @@
+
+.d1{
+	display:block;
+}
+.d2{
+	display:none;
+}
+.processing{
+    float: left;
+    padding: 10px;
+    /* width: 70px; */
+}
+.d_error_message{
+    background-color: #EFFF79;
+    float: right;
+    font-size: 14px;	
+}
+.d_error_message2{
+    background-color: #EFFF79;
+    float: left;
+    font-size: 14px;
+	padding:0 10px 0 10px;
+	width: 780px;
+}
+.clear{
+	clear:both;
+}
+.d_h5{
+	height:5px;
+}
+.listText2 {
+    float: left;
+    height: 120px;
+    overflow-y: auto;
+    padding: 5px 0 0 10px;
+    width: 295px;
+}
+.listText3{
+    float: left;
+    height: 120px;
+    overflow-y: auto;
+    padding: 5px 0 0 10px;
+    width: 487px;
+}
+
+.browseImage {
+    margin: 5px 0 5px 8px;
+}
+
+/* new addon css  for inbox */
+
+#topBarContainer {
+	width:100%;
+	height:32px;
+	background-color:#3a3a3a;
+	border-bottom:#000 solid 1px; 
+}
+
+#topBarHolder, #mainBarHolder, #contentHolder {
+	width:1000px;
+	margin:0 auto 0 auto;
+}
+#topBarHolder{
+	height:32px;
+}
+#contentHolder{
+	clear:both;
+}
+#contentLeft{
+	float:left; 
+	width:815px;
+/*	border: 1px solid;*/
+}
+#mainBarHolder{
+	height:195px;
+}
+.inbox_text{
+	font-family:Arial, verdana;
+	color:#3a3a3a;
+	font-size:18px;
+	font-weight:bold;
+}
+#googleMap{
+	height:411px;
+	width:817px;
+	margin:15px 0 40px 0;
+}
+
+

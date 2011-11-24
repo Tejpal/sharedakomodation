@@ -1,0 +1,16 @@
+AcceptPathInfo On
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /findacc/
+	#RewriteCond %{REQUEST_FILENAME} !index.php
+	#RewriteRule (.*)\.php$ index.php/$1
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+	
+	# For facebook integration
+    #  RewriteRule ^(.*)xd_receiver.php(.*)$ xd_receiver.php$2 [QSA,L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    #ErrorDocument 404 index.php
+</IfModule>

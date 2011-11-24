@@ -1,0 +1,72 @@
+
+ads_id 	
+
+
+user_id user id - added by user	
+first_name 	
+last_name 	
+phone 	
+phone_visibility 0/1 1-yes, 0-no	
+email 	
+email_visibility 0/1 1-yes, 0-no	
+
+street_address 	
+city 	
+state 	
+country 	
+postal_code 	
+address_visibility 0/1 1-yes,0-no	
+
+rent 
+Amount/rent - price 	
+rent_type weekly/monthly (0/1) 0-weekly,1-monthly	
+property_type 	
+bond Bond / security 
+	
+min_stay Minimum stay 	
+max_stay Maximum stay 	
+availability 
+
+	
+bills yes/no (0/1) 1-yes,0-no	
+furnished yes/no (0/1) 1-yes,0-no	
+gender m-male, f-female (m/f) m-male,f-female	
+smoker smoker/non-smoker (0/1) 0-non-smoker ,1-smoker	
+age
+
+ 	
+orientation orientation	
+diet Veg/Non-Veg (0/1) 0-veg, 1-non-veg	
+	
+bed_rooms 	
+bath_rooms 
+
+
+	
+title Statement / heading	
+community 
+	
+	
+description 	
+bestfeature1 Best feature 1 	
+bestfeature2 Best feature 2	
+ 	
+
+	
+	
+	
+	
+sharing_type provider/finder (0/1) 1-provider, 0-finder 	
+status active/inactive (0/1) 1-active,0-
+
+
+addedtime now()
+
+
+
+parking 
+surrounding 
+
+
+In ad sharing provider create ad form there is not surrounding and parking.
+

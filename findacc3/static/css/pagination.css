@@ -1,0 +1,67 @@
+
+#tnt_pagination {
+	display:block;
+	text-align:left;
+	height:22px;
+	line-height:21px;	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	float:right;
+}
+
+#tnt_pagination a:link, #tnt_pagination a:visited{
+	padding:7px;
+	padding-top:2px;
+	padding-bottom:2px;
+	border:1px solid #f8991d;
+	margin-left:4px;
+	text-decoration:none;
+	background-color:#fff;
+	color:#3a3a3a;
+	width:22px;
+	font-weight:normal;
+}
+
+#tnt_pagination a:hover {
+	background-color:#f8991d;
+	border:1px solid #f8991d;
+	color:#3a3a3a;	
+}
+
+#tnt_pagination .active_tnt_link {
+	padding:7px;
+	padding-top:2px;
+	padding-bottom:2px;
+	border:1px solid #f8991d;
+	margin-left:4px;
+	text-decoration:none;
+	background-color:#f8991d;
+	color:#fff;
+	cursor:default;
+}
+
+#tnt_pagination .disabled_tnt_pagination {
+	padding:7px;
+	padding-top:2px;
+	padding-bottom:2px;
+	border:1px solid #dcdcdc;
+	margin-left:4px;
+	text-decoration:none;
+	background-color:#fff;
+	color:#cbcbcb;
+	cursor:default;
+}
+.pages
+{
+    float: left;
+    font-size: 13px;
+    /* width: 70px; */
+}
+
+.pagination
+{
+    float: left;
+	width:100%;
+    /* width: 802px; */
+}

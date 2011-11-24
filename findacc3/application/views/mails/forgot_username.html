@@ -1,0 +1,74 @@
+<?php
+$baseurl = site_url() . '/';
+$staticurl = $this->config->item('static_url');
+?>
+
+<body style="color:#3a3b3a;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#9b9b9b" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#3a3b3a;">
+  <tr>
+    <td><p>&nbsp;</p>
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td align="center">
+    	<table width="650" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td valign="top">
+    <a href="<?php echo $baseurl;?>" alt="<?php echo $baseurl;?>" title="<?php echo $baseurl;?>"><img src="<?=$staticurl?>images/headBackfu.gif" width="650" height="102" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td align="center" style="background-color:#9b9b9b;">
+   <table width="626" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td align="left" style="border-left:#727272 solid 1px;border-right:#727272 solid 1px;background-color:#eaeaea; width:565px; line-height:20px; color:#3a3b3a; font-family:Arial, Helvetica, sans-serif; font-size:13px;
+padding:0 28px 0 28px;"><br /><span style="font-size:14px; font-family:Arial, Helvetica, sans-serif;;">
+    	<strong>Dear <?php echo ucfirst($username);?>,</strong><br /><br />
+    </span>
+    <span style="font-size:13px; font-family:Arial, Helvetica, sans-serif; line-height:20px;">
+        Thankyou for using SharedAkomodation.com<br />
+        As requested, Username to access your account is as under:<br />
+    </span><br />
+    <table width="566" border="0" cellspacing="0" cellpadding="0" style="font-family:Arial, Helvetica, sans-serif;
+    color:#3a3b3a;
+    font-size:13px;
+    line-height:20px;">
+      <tr>
+        <td align="left" style="background-color:#e1e0e0; padding:10px;">
+          <h1 style="color:#eb8823; font-size:16px; font-weight:bold;padding:0; margin:0 0 10px 0; font-family:Arial, Helvetica, sans-serif;">
+            Username: <?php echo $username;?>
+            </h1>
+          
+          </td>
+      </tr>
+    </table>
+    <br />
+After signing in to your account, you can change your Username or  Password any time in <br /><strong>My Account</strong> page.<br />
+    <br />Thanks,<br />
+SharedAkomodation.com
+
+</td>
+  </tr>
+</table>
+ 
+</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="<?=$staticurl?>images/botBack.gif" width="650" height="53" /></td>
+  </tr>
+  <tr>
+    <td align="center" style="color:#ececec; padding:0 40px; font-size:12px; font-family:Arial, Helvetica, sans-serif;">
+    This message was sent to <a href="mailto:<?php echo $email;?>" style="color:#fff; font-weight:bold;"><?php echo $email;?></a>. If you don't want to receive emails from 
+SharedAkomodation.com in future, you can unsubscribe from the link below.<br /><br />
+   
+    </td>
+  </tr>
+</table>
+    </td>
+  </tr>
+</table>
+<div align="center" style="color:#9b9b9b; font-family:Arial, Helvetica, sans-serif; font-size:12px;"><br /> &copy;&nbsp;2010 SharedAkomodation.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" style="color:#9b9b9b;">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#" style="color:#9b9b9b;">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#" style="color:#9b9b9b;">Unsubscribe</a></div>
+</body>
